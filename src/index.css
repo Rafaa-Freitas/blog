@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  @apply font-sans;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+
+  @apply leading-[26px] font-extralight text-base text-white-light hover:opacity-70 transition ease-in-out duration-300;
+}
+
+body {
+  width: 100%;
+  position: relative;
+
+  @apply bg-black-dark;
+
+  &::-webkit-scrollbar {
+    padding-right: 2px;
+    width: 8px;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    @apply bg-black-light;
+  }
+}
+
+svg,
+img {
+  width: 100%;
+  /* height: auto; */
+}
+
+input {
+  @apply accent-primary-normal;
+}
+
+input,
+select,
+option,
+textarea {
+  @apply py-2.5 px-3 bg-black-light rounded-[4px] border-0 w-full text-white-light leading-[26px] font-extralight text-base;
+}
+
+.btn {
+  @apply inline-block text-white-light py-2 px-6 bg-gradient-0 rounded-[4px];
+}
+
+.btn-search {
+  @apply cursor-pointer h-12 w-14 bg-search-icon bg-no-repeat bg-center bg-black-light border-0 rounded-[4px] -translate-x-1.5;
+}
+
+.bx {
+  @apply hidden max-lg:block w-10 h-10 cursor-pointer relative;
+
+  &::after {
+    @apply content-[''] w-[70%] h-0.5 block bg-white absolute top-[35%] left-[40%] -translate-x-1/2 -translate-y-1/2 rounded-sm transition-all duration-500 ease-in-out;
+  }
+
+  &::before {
+    @apply content-[''] w-[70%] h-0.5 block bg-white absolute top-[65%] left-[60%] -translate-x-1/2 -translate-y-1/2 rounded-sm transition-all duration-500 ease-in-out;
+  }
+
+  &.open {
+    &::after {
+      @apply absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 rotate-[135deg];
+    }
+
+    &::before {
+      @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-315deg];
+    }
+  }
+}
+
+.menu-mobile {
+  li {
+    @apply border-b border-black-light;
+
+    .link-menu-mobile {
+      @apply inline-block w-full h-full py-6 px-4 hover:bg-black-light hover:pl-6;
+    }
+  }
+}
