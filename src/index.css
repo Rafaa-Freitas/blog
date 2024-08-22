@@ -56,6 +56,17 @@ textarea {
   @apply py-2.5 px-3 bg-black-light rounded-[4px] border-0 w-full text-white-light leading-[26px] font-extralight text-base;
 }
 
+p {
+  @apply tracking-normal text-gray-5 text-base leading-[26px] font-normal;
+
+  @apply max-sm:text-sm max-sm:leading-[26px];
+}
+
+.container-layout {
+  @apply max-w-screen-xl my-0 mx-auto overflow-hidden py-32 px-6 flex flex-col lg:flex-row;
+  @apply max-lg:py-24 max-lg:px-4;
+}
+
 .btn {
   @apply inline-block text-white-light py-2 px-6 bg-gradient-0 rounded-[4px];
 }
@@ -94,4 +105,40 @@ textarea {
       @apply inline-block w-full h-full py-6 px-4 hover:bg-black-light hover:pl-6;
     }
   }
+}
+
+.h0 {
+  @apply text-white-light text-[120px] leading-[120%] font-medium;
+
+  @apply max-lg:text-[88px] max-sm:text-[32px];
+}
+
+h3 {
+  @apply text-white-dark text-5xl leading-[120%] font-normal;
+
+  @apply max-lg:text-[32px] max-sm:text-[28px];
+}
+
+h4 {
+  @apply text-white-dark text-4xl leading-[120%] font-normal;
+
+  @apply max-lg:text-[28px] max-lg:leading-[130%] max-sm:text-xl max-sm:leading-[140%];
+}
+
+h6 {
+  @apply text-white-dark text-lg leading-normal font-normal;
+
+  @apply max-lg:text-base;
+}
+
+.profile {
+  @apply w-12 h-12 rounded-full;
+}
+
+.profile-big {
+  @apply w-32 h-32 rounded-full;
+}
+
+.profile-img {
+  @apply rounded-full border-2 border-primary-normal;
 }

@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   purge: {
@@ -59,7 +60,45 @@ export default {
           'linear-gradient(224.78deg, #5390E3 8.12%, #1357B3 92.21%)',
         'search-icon': 'url("./images/search-icon.svg")',
       },
+      spacing: {
+        gutter: '32px',
+      },
+      // width: (theme) => ({
+      //   // 'grid-1': `calc((1/12) * 100% - ${theme('spacing.gutter')})`,
+      //   // 'grid-2': `calc((2/12) * 100% - ${theme('spacing.gutter')})`,
+      //   // 'grid-3': `calc((3/12) * 100% - ${theme('spacing.gutter')})`,
+      //   // 'grid-4': `calc((4/12) * 100% - ${theme('spacing.gutter')})`,
+      //   // 'grid-5': `calc((5/12) * 100% - ${theme('spacing.gutter')})`,
+      //   // 'grid-6': `calc((6/12) * 100% - ${theme('spacing.gutter')})`,
+      //   // 'grid-7': `calc((7/12) * 100% - ${theme('spacing.gutter')})`,
+      //   // 'grid-8': `calc((8/12) * 100% - ${theme('spacing.gutter')})`,
+      //   // 'grid-9': `calc((9/12) * 100% - ${theme('spacing.gutter')})`,
+      //   // 'grid-10': `calc((10/12) * 100% - ${theme('spacing.gutter')})`,
+      //   // 'grid-11': `calc((11/12) * 100% - ${theme('spacing.gutter')})`,
+      //   // 'grid-12': `calc((12/12) * 100% - ${theme('spacing.gutter')})`,
+      // }),
+      margin: {
+        'gutter-half': '16px',
+        'grid-margin': '16px 0px',
+      },
+      padding: {
+        'gutter-half': '16px',
+        'grid-padding': '16px 0px',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities, theme }) {
+      const gutters = theme('spacing.gutter');
+      const gridSizes = Array.from({ length: 12 }, (_, i) => i + 1);
+
+      const widthUtilities = gridSizes.reduce((acc, size) => {
+        const width = `calc((${size}/12) * 100% - ${gutters})`;
+        acc[`.w-grid-${size}`] = { width };
+        return acc;
+      }, {});
+
+      addUtilities(widthUtilities, ['responsive', 'hover']);
+    }),
+  ],
 };
