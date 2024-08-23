@@ -63,20 +63,6 @@ export default {
       spacing: {
         gutter: '32px',
       },
-      // width: (theme) => ({
-      //   // 'grid-1': `calc((1/12) * 100% - ${theme('spacing.gutter')})`,
-      //   // 'grid-2': `calc((2/12) * 100% - ${theme('spacing.gutter')})`,
-      //   // 'grid-3': `calc((3/12) * 100% - ${theme('spacing.gutter')})`,
-      //   // 'grid-4': `calc((4/12) * 100% - ${theme('spacing.gutter')})`,
-      //   // 'grid-5': `calc((5/12) * 100% - ${theme('spacing.gutter')})`,
-      //   // 'grid-6': `calc((6/12) * 100% - ${theme('spacing.gutter')})`,
-      //   // 'grid-7': `calc((7/12) * 100% - ${theme('spacing.gutter')})`,
-      //   // 'grid-8': `calc((8/12) * 100% - ${theme('spacing.gutter')})`,
-      //   // 'grid-9': `calc((9/12) * 100% - ${theme('spacing.gutter')})`,
-      //   // 'grid-10': `calc((10/12) * 100% - ${theme('spacing.gutter')})`,
-      //   // 'grid-11': `calc((11/12) * 100% - ${theme('spacing.gutter')})`,
-      //   // 'grid-12': `calc((12/12) * 100% - ${theme('spacing.gutter')})`,
-      // }),
       margin: {
         'gutter-half': '16px',
         'grid-margin': '16px 0px',
