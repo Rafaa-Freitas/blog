@@ -10,7 +10,7 @@ function Header() {
 
   return (
     <>
-      <header className="w-full border-black-light border-b h-20 flex justify-between items-center px-4 py-2">
+      <header className="w-full border-black-light border-b h-20 flex justify-between items-center px-4 py-2 fixed z-50 bg-black-dark/40 backdrop-blur-[6px]">
         <nav className="flex justify-start items-center">
           <div className="logo max-w-16 min-w-12">
             <a href="">
@@ -29,7 +29,7 @@ function Header() {
         </nav>
 
         <div
-          className={`bx  ${isMobileMenuOpen ? 'open' : ''}`}
+          className={`bx ${isMobileMenuOpen ? 'open' : ''}`}
           onClick={toggleIsMobileMenuOpen}
         ></div>
 

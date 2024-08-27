@@ -68,7 +68,9 @@ p {
 }
 
 .btn {
-  @apply inline-block text-white-light py-2 px-6 bg-gradient-0 rounded-[4px];
+  @apply inline-block text-white-light py-2 px-6 bg-gradient-0 rounded-[4px] border-0 text-base leading-[26px];
+
+  @apply hover:opacity-70 cursor-pointer transition-all duration-300 ease-in-out;
 }
 
 .btn-search {
@@ -123,6 +125,12 @@ h4 {
   @apply text-white-dark text-4xl leading-[120%] font-normal;
 
   @apply max-lg:text-[28px] max-lg:leading-[130%] max-sm:text-xl max-sm:leading-[140%];
+}
+
+h5 {
+  @apply text-white-dark text-2xl leading-[140%] font-normal;
+
+  @apply max-lg:text-xl max-lg:leading-[140%];
 }
 
 h6 {

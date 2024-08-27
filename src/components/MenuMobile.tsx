@@ -7,7 +7,7 @@ function MenuMobile({ isOpen, toggleMenu }: MenuMobileProps) {
   return (
     <div className="relative">
       <div
-        className={`menu-mobile w-full h-screen absolute inset-0 bg-black-normal transition-all duration-700 ease-in-out ${
+        className={`menu-mobile w-full h-screen absolute inset-0 bg-black-dark/40 backdrop-blur-lg transition-all duration-700 ease-in-out mt-20 z-50 ${
           !isOpen ? '-left-full' : ''
         }`}
       >
