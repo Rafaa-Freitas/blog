@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Post() {
   return (
     <section className="container-layout">
