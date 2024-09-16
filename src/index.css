@@ -49,6 +49,11 @@ input {
   @apply accent-primary-normal;
 }
 
+select,
+option {
+  @apply h-[48px];
+}
+
 input,
 select,
 option,
