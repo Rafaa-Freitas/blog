@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Login() {
   return <h1 className="h0">Login.js</h1>;
 }
