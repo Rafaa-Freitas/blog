@@ -54,6 +54,8 @@ export default {
         'yellow-normal': '#FFCE52',
         'yellow-dark': '#d9b043',
         'yellow-light': '#ffd76b',
+
+        'footer-color': 'rgba(15, 20, 31, 0.5)',
       },
       backgroundImage: {
         'gradient-0':

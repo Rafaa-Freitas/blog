@@ -58,7 +58,7 @@ input,
 select,
 option,
 textarea {
-  @apply py-2.5 px-3 bg-black-light rounded-[4px] border-0 w-full text-white-light leading-[26px] font-extralight text-base;
+  @apply py-2 px-3 bg-black-light rounded-[4px] border-0 w-full text-white-light leading-[26px] font-extralight text-base;
 }
 
 p {
