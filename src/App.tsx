@@ -27,16 +27,6 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
-  // return (
-  //   <>
-  //     <Header></Header>
-  //     <Home></Home>
-  //     <Login></Login>
-  //     <Profile></Profile>
-  //     <AddPost></AddPost>
-  //     <Post></Post>
-  //   </>
-  // );
 }
 
 export default App;
