@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './components/Home';
+import Home from './pages/Home';
 import Login from './pages/Login';
 import Post from './pages/Post';
 import Profile from './pages/Profile';
@@ -20,7 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/post" element={<Post />} />
+          <Route path="/post/:idPost" element={<Post />} />
           <Route path="/search" element={<Search />} />
           <Route path="*" element={<NotFound />} />
         </Route>

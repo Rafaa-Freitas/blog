@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Hero() {
   return (
     <section className="container-layout justify-center items-center">
@@ -13,9 +15,9 @@ function Hero() {
             Conectar.
           </p>
 
-          <a href="" className="btn mt-8">
+          <Link to="/login" className="btn mt-8">
             Começar a escrever
-          </a>
+          </Link>
         </div>
         <div className="w-grid-12 lg:w-grid-6 m-4 py-4">
           <img src="./images/blog.svg" alt="" />

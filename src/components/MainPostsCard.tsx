@@ -4,6 +4,7 @@ import User from '../interfaces/User';
 import api from '../services/api';
 import ENDPOINTS from '../services/endpoints';
 import { AxiosResponse } from 'axios';
+import { Link } from 'react-router-dom';
 
 interface MainPostsCardProps {
   mainPost: Post;
@@ -31,7 +32,10 @@ function MainPostsCard({ mainPost }: MainPostsCardProps) {
         {mainPost.category}
       </h6>
 
-      <h4>{mainPost.title}</h4>
+      <Link to={`/post/${mainPost.id}`}>
+        <h4>{mainPost.title}</h4>
+      </Link>
+
       <p className="mt-2">{mainPost.resume}</p>
 
       <div className="flex items-center justify-start mt-6">

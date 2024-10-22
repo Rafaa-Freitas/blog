@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import MenuMobile from './MenuMobile';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -13,17 +14,17 @@ function Header() {
       <header className="w-full border-black-light border-b h-20 flex justify-between items-center px-4 py-2 fixed z-50 bg-black-dark/40 backdrop-blur-[6px]">
         <nav className="flex justify-start items-center">
           <div className="logo max-w-16 min-w-12">
-            <a href="">
+            <Link to="/">
               <img src="./images/blog-logo.svg" alt="" />
-            </a>
+            </Link>
           </div>
 
           <ul className="menu list-none flex space-x-6 max-lg:hidden">
             <li>
-              <a href="">Sobre</a>
+              <Link to="/about">Sobre</Link>
             </li>
             <li>
-              <a href="">Contato</a>
+              <Link to="/contact">Contato</Link>
             </li>
           </ul>
         </nav>
@@ -42,9 +43,9 @@ function Header() {
           </div>
 
           <div className="cta-desktop block max-lg:hidden ml-6">
-            <a href="" className="btn">
+            <Link className="btn" to="/login">
               Login
-            </a>
+            </Link>
           </div>
 
           <div className="cta-mobile hidden max-lg:block text-primary-light">
