@@ -20,7 +20,6 @@ function MainPostsCard({ mainPost }: MainPostsCardProps) {
         .get(ENDPOINTS.getUser(userId))
         .then((response: AxiosResponse<User>) => {
           setUser(response.data);
-          console.log(response.data);
         });
     }
   }, [userId, mainPost]);

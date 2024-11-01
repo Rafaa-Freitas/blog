@@ -13,7 +13,6 @@ function MainPosts() {
       .get(ENDPOINTS.getAllPosts('?star=5&_limit=2&_order=desc'))
       .then((response: AxiosResponse<Post[]>) => {
         setMainPosts(response.data);
-        console.log('Main Posts -> ' + response.data);
       });
   }, []);
 

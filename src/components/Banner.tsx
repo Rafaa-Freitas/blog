@@ -12,7 +12,6 @@ function Banner() {
       .get(ENDPOINTS.getAllPosts('?_sort=date&_order=desc&_limit=1'))
       .then((response: AxiosResponse<Post[]>) => {
         setBanner(response.data[0]);
-        console.log(response.data[0]);
       });
   }, []);
 

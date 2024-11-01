@@ -13,7 +13,6 @@ function MostViewed() {
       .get(ENDPOINTS.getAllPosts('?_sort=views&_order=desc&_limit=3'))
       .then((response: AxiosResponse<Post[]>) => {
         setMostViewed(response.data);
-        console.log(response.data);
       });
   }, []);
 
